@@ -1,6 +1,6 @@
 # [spOccupancy: An R package for single species, multispecies, and integrated spatial occupancy models](https://arxiv.org/pdf/2111.12163.pdf)
 
-### In Review
+### In press Methods in Ecology and Evolution
 
 ### Jeffrey W. Doser, Andrew O. Finley, Marc K&eacute;ry, Elise F. Zipkin 
 
@@ -12,10 +12,10 @@
 
 ## Abstract
 
-1. Occupancy modeling is a common approach to estimate spatial and temporal species distribution patterns, while explicitly accounting for measurement errors common in detection-nondetection data. Numerous extensions of the basic single species occupancy model exist to address dynamics, multiple species or states, interactions, false positive errors, autocorrelation, and to integrate multiple data sources, yet specialized and computationally efficient software to fit spatial models to large data sets is scarce or absent. 
-2. We introduce the `spOccupancy` `R` package designed to fit single species, multispecies, and integrated spatially-explicit occupancy models. Using a Bayesian framework, we leverage P&oacute;ly Gamma data augmentation and Nearest Neighbor Gaussian Processes to ensure models are computationally efficient for potentially massive data sets.
-3. `spOccupancy` provides computationally efficient and user-friendly functions for data simulation, model fitting, model validation (by posterior predictive checks), model comparison (using information criteria and k-fold cross-validation), and out-of-sample prediction. We illustrate the package's functionality via a vignette, simulated data analysis, and two bird case studies, in which we estimate occurrence of the Black-throated Green Warbler (*Setophaga virens*) across the eastern USA and species richness of a foliage-gleaning bird community in the Hubbard Brook Experimental Forest in New Hampshire, USA. 
-4. The `spOccupancy` package provides a user-friendly approach to fit a variety of single and multispecies occupancy models, making it straightforward to address detection biases and spatial autocorrelation in these specialized species distribution models even for large data sets.  
+1. Occupancy modeling is a common approach to assess species distribution patterns, while explicitly accounting for false absences in detection-nondetection data. Numerous extensions of the basic single-species occupancy model exist to model multiple species, spatial autocorrelation, and to integrate multiple data types. However, development of specialized and computationally efficient software to incorporate such extensions, especially for large data sets, is scarce or absent. 
+2. We introduce the `spOccupancy` `R` package designed to fit single-species and multi-species spatially-explicit occupancy models. We fit all models within a Bayesian framework using P&oacute;lya-Gamma data augmentation, which results in fast and efficient inference. `spOccupancy` provides functionality for data integration of multiple single-species detection-nondetection data sets via a joint likelihood framework. The package leverages Nearest Neighbor Gaussian Processes to account for spatial autocorrelation, which enables spatially-explicit occupancy modeling for potentially massive data sets (e.g., 1000s-100,000s of sites).
+3. `spOccupancy` provides user-friendly functions for data simulation, model fitting, model validation (by posterior predictive checks), model comparison (using information criteria and k-fold cross-validation), and out-of-sample prediction. We illustrate the package's functionality via a vignette, simulated data analysis, and two bird case studies. 
+4. The `spOccupancy` package provides a user-friendly platform to fit a variety of single and multi-species occupancy models, making it straightforward to address detection biases and spatial autocorrelation in species distribution models even for large data sets.  
 
 ## Repository Directory
 
@@ -25,7 +25,7 @@ All code and resulting model objects were created and saved using spOccupancy v0
 
 Contains all code and data for case study of the Black-throated Green Warbler distribution across the eastern USA. 
 
-+ `data`: directory containing the raw BBS data used in the analysis.
++ `data`: directory containing the raw BBS data used in the analysis. These data were downloaded directly from the USGS.
 + `bbs-PGOcc-cross-val.R`: script to run nonspatial single species occupancy model with cross-validation.
 + `bbs-PGOcc.R`: script to run nonspatial single species occupancy model.
 + `bbs-data-prep.R`: script to prepare the raw data in the `data` subdirectory for analysis in `spOccupancy`. 
@@ -42,7 +42,7 @@ Contains all code and data for case study of the Black-throated Green Warbler di
 
 Contains all code and data for case study of the foliage-gleaning bird community in the Hubbard Brook Experimental Forest.
 
-+ `hbef-spatial`: directory containing shapefiles for creation of Figure 2 in the manuscript.
++ `hbef-spatial`: directory containing shapefiles of the Hubbard Brook Experimental Forest boundaries for creation of Figure 2 in the manuscript.
 + `hbef-msPGOcc-cross-val.R`: script to run nonspatial multispecies occupancy model with cross-validation.
 + `hbef-msPGOcc-int.R`: script to run nonspatial multispecies occupancy model with an intercept only model for occurrence.
 + `hbef-msPGOcc.R`: script to run nonspatial multispecies occupancy model.
@@ -52,14 +52,14 @@ Contains all code and data for case study of the foliage-gleaning bird community
 + `hbef-spMsPGOcc-nn.R`: script to compare spatial multispecies occupancy models fit with different numbers of nearest neighbors.
 + `hbef-spMsPGOcc.R`: script to run spatial multispecies occupancy model.
 + `pfile-1`, `pfile-2`, `pfile-3`, `pfile-sp-1`, `pfile-sp-2`, `pfile-sp-3`: files used to specify initial values when running files across multiple cores from the command line.
-+ `summary-hbef.R`: script to perform summary analyses of all model results. Code to produce Figure 2, Table 3, and Figure 3 is in this script.
++ `summary-hbef.R`: script to perform summary analyses of all model results. Code to produce Figure 2, Table 3, Figure S1, and Figure S2 is in this script.
 
 ### [Simulations](./simulations)
 
 Contains code and data for analysis of a simulated data set. 
 
-+ `simulation-data.rda`: simulated data set obtained using `simIntOcc`. 
-+ `spIntPGOcc-sim.R`: script to fit spatial integrated occupancy model for the simulated data set and analyze the results. Code to produce Figure 4 is in this script.
++ `simulation-data.rda`: simulated data set obtained using `simIntOcc()`. 
++ `spIntPGOcc-sim.R`: script to fit spatial integrated occupancy model for the simulated data set and analyze the results. Code to produce Figure S3 and Table S1 is in this script.
 
 
 
