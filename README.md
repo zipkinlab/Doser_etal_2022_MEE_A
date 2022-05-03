@@ -6,6 +6,8 @@
 
 ### Package [Website](https://www.jeffdoser.com/files/spoccupancy-web/) and [Repository](https://github.com/doserjef/spOccupancy/)
 
+### Code/Data DOI: [![DOI](https://zenodo.org/badge/488171864.svg)](https://zenodo.org/badge/latestdoi/488171864)
+
 ### Please contact the first author for questions about the code or data used in the empirical case studies: Jeffrey W. Doser (doserjef@msu.edu)
 
 ---------------------------------
