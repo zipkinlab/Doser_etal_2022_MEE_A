@@ -1,4 +1,4 @@
-# [spOccupancy: An R package for single species, multispecies, and integrated spatial occupancy models](https://arxiv.org/pdf/2111.12163.pdf)
+# [spOccupancy: An R package for single-species, multi-species, and integrated spatial occupancy models](https://arxiv.org/pdf/2111.12163.pdf)
 
 ### In press Methods in Ecology and Evolution
 
