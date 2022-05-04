@@ -1,4 +1,4 @@
-### [Simulations](./simulations)
+### Simulations
 
 Contains code and data for analysis of a simulated data set. 
 
