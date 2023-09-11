@@ -1,6 +1,6 @@
 # [spOccupancy: An R package for single-species, multi-species, and integrated spatial occupancy models](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13897)
 
-### Methods in Ecology and Evolution
+### Methods in Ecology and Evolution [DOI:10.1111/2041-210X.13897](https://doi.org/10.1111/2041-210X.13897)
 
 ### Jeffrey W. Doser, Andrew O. Finley, Marc K&eacute;ry, Elise F. Zipkin 
 
